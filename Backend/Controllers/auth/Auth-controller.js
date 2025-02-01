@@ -50,7 +50,7 @@ const signin = async (req, res) => {
                     role: SignInData.role,
                     image: SignInData.image
                 }, process.env.JWT_KEY)
-                res.cookie(process.env.JWT_KEY, token, { httpOnly: true, secure: false , expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) })
+                res.cookie(process.env.JWT_KEY, token, { httpOnly: true, secure: true, sameSite: "None" , expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) })
                     .json({ success: true, token: token, role: SignInData.role, message: "Login Success" , user :SignInData })
             }
             else {
@@ -131,7 +131,8 @@ const Google = async (req, res) => {
         if (decoded) {
             res.cookie(process.env.JWT_KEY, token, { 
                 httpOnly: true, 
-                secure: false, 
+                sameSite: "None",
+                secure: true, 
                 expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) 
             }).json({ 
                 success: true, 
@@ -191,7 +192,7 @@ const GitHub = async (req, res) => {
                 }, process.env.JWT_KEY);
                 const decoded = jwt.verify(token, process.env.JWT_KEY);
                 if (decoded) {
-                    res.cookie("token", token, { httpOnly: true, secure: false })
+                    res.cookie("token", token, { httpOnly: true, secure: true })
                         .json({ success: true, message: "Login Success" })
                 }
             }

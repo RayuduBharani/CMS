@@ -40,7 +40,8 @@ const InstructureRole = async (req, res) => {
             await NewInstructorData.save()
             res.cookie(process.env.JWT_KEY, token, {
                 httpOnly: true,
-                secure: false,
+                secure: true,
+                sameSite: "None",
                 expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
             }).send({
                 role: NewInstructorData.role,
@@ -95,7 +96,8 @@ const TeamLeadRole = async (req, res) => {
             res.cookie(process.env.JWT_KEY, token, {
                 httpOnly: true,
                 expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-                secure: false,
+                secure: true,
+                sameSite: "None"
             }).send({
                 success: true,
                 message: "You are registered as a Lead",
@@ -158,7 +160,8 @@ const StudentRole = async (req, res) => {
             }, process.env.JWT_KEY);
             res.cookie(process.env.JWT_KEY, token, {
                 httpOnly: true,
-                secure: false,
+                secure: true,
+                sameSite: "None",
                 expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
             }).send({
                 success: true,

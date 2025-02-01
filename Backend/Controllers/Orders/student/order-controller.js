@@ -28,8 +28,8 @@ const StudentCreateModel = async (req, res) => {
                 payment_method: "paypal"
             },
             redirect_urls: {
-                return_url: `${process.env.ClIENT_URL}/student/payment-return`,
-                cancel_url: `${process.env.ClIENT_URL}/student/payment-cancel`
+                return_url: `${process.env.CLIENT_URL}/student/payment-return`,
+                cancel_url: `${process.env.CLIENT_URL}/student/payment-cancel`
             },
             transactions: [{
                 item_list: {
