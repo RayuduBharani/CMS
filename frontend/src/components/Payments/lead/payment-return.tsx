@@ -22,7 +22,7 @@ export default function PaymentReturn() {
                     orderId: currentOrderId,
                     leadId : user.userId
                 }
-                const respose = await fetch("https://gcc-iota.vercel.app/lead/order/caputre", {
+                const respose = await fetch("https://cms-backend-rho.vercel.app/lead/order/caputre", {
                     method: "POST",
                     headers: {
                         "Content-type": "application/json"

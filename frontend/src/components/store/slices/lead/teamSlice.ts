@@ -12,7 +12,7 @@ const initialState : initialStateInterfase = {
 export const FindTeamMembers = createAsyncThunk(
     "/lead/members",
     async()=>{
-        const response = await fetch("https://gcc-iota.vercel.app/lead/team/members" , {
+        const response = await fetch("https://cms-backend-rho.vercel.app/lead/team/members" , {
             credentials :"include"
         })
         const data = await response.json()

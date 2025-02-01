@@ -15,7 +15,7 @@ export default function Orders() {
     const [totalAmount, setTotalAmount] = useState<number>(0);
 
     const fetchInstructorEarnings = async () => {
-        const response = await fetch("https://gcc-iota.vercel.app/admin/course/orders", {
+        const response = await fetch("https://cms-backend-rho.vercel.app/admin/course/orders", {
             credentials: "include",
         });
         const data = await response.json();

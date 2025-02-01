@@ -22,7 +22,7 @@ export default function StudentCourseDetailesView() {
     const [approvalUrl, setApprovalUrl] = useState("")
     const [isProcessing, setIsProcessing] = useState(false)
     const FetchCourseInfo = async () => {
-        const response = await fetch(`https://gcc-iota.vercel.app/courses/get/${id}`)
+        const response = await fetch(`https://cms-backend-rho.vercel.app/courses/get/${id}`)
         const data = await response.json()
         setCourseInfo(data)
     }
@@ -54,7 +54,7 @@ export default function StudentCourseDetailesView() {
             courseTitle: courseInfo?.title
         }
         try {
-            const response = await fetch("https://gcc-iota.vercel.app/lead/order/create/stu", {
+            const response = await fetch("https://cms-backend-rho.vercel.app/lead/order/create/stu", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"

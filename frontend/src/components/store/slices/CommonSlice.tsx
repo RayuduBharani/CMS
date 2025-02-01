@@ -13,7 +13,7 @@ const initialState: AllCoursesinitialState = {
 export const fetchAllCourses = createAsyncThunk(
     "courses/fetchAll",
     async () => {
-        const response = await fetch("https://gcc-iota.vercel.app/courses/Allcourses");
+        const response = await fetch("https://cms-backend-rho.vercel.app/courses/Allcourses");
         const data = await response.json();
         return data;
     }

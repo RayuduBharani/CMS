@@ -8,7 +8,7 @@ const initialState : FindInstructorCourses = {
 export const FetchInstructorCourses = createAsyncThunk(
     "instructor/courses",
     async () => {
-        const response = await fetch("https://gcc-iota.vercel.app/instructor/course/get" , {
+        const response = await fetch("https://cms-backend-rho.vercel.app/instructor/course/get" , {
             method : "GET" ,
             credentials : "include"
         })

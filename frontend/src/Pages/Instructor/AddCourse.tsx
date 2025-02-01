@@ -160,7 +160,7 @@ const AddCourse = () => {
         };
 
         console.log("Submitting form data: ", formSubmissionData);
-        fetch('https://gcc-iota.vercel.app/instructor/course/add', {
+        fetch('https://cms-backend-rho.vercel.app/instructor/course/add', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

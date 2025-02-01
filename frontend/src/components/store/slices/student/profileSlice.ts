@@ -26,7 +26,7 @@ const initialState : InitialState = {
 export const StudentProfileInfo = createAsyncThunk(
     "/student/profile",
     async () => {
-        const response = await fetch("https://gcc-iota.vercel.app/student/profile/info" , {
+        const response = await fetch("https://cms-backend-rho.vercel.app/student/profile/info" , {
             credentials : "include"
         })
         const data = await response.json()
@@ -37,7 +37,7 @@ export const StudentProfileInfo = createAsyncThunk(
 export const StudentUpdateProfileInfo = createAsyncThunk(
     "/student/profile/edit",
     async (formData : IUpdateProfileData) => {
-        const response = await fetch("https://gcc-iota.vercel.app/student/profile/update", {
+        const response = await fetch("https://cms-backend-rho.vercel.app/student/profile/update", {
             credentials: "include",
             method: "PUT",
             headers: {

@@ -17,7 +17,7 @@ export const FetchStudentCourse =  createAsyncThunk(
     '/student/mycourses/view-page',
     async (id:string) => {
         const response = await fetch(
-            `https://gcc-iota.vercel.app/student/progress-page/viewcourse/${id}`,
+            `https://cms-backend-rho.vercel.app/student/progress-page/viewcourse/${id}`,
             {
                 credentials:'include',
             }

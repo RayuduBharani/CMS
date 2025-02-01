@@ -17,7 +17,7 @@ export default function ViewCourse() {
     const [courseInfo, setCourseInfo] = useState<ICourse>()
 
     const FetchCourseInfo = async () => {
-        const response = await fetch(`https://gcc-iota.vercel.app/courses/get/${id}`)
+        const response = await fetch(`https://cms-backend-rho.vercel.app/courses/get/${id}`)
         const data = await response.json()
         setCourseInfo(data)
     }
@@ -31,7 +31,7 @@ export default function ViewCourse() {
     }
 
     const handleDelete = async (id: string) => {
-        const response = await fetch(`https://gcc-iota.vercel.app/admin/course/delete/${id}`, {
+        const response = await fetch(`https://cms-backend-rho.vercel.app/admin/course/delete/${id}`, {
             method: "PUT"
         })
         const data = await response.json();

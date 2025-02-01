@@ -42,7 +42,7 @@ export default function Signup() {
             email: email,
             password: password
         }
-        const response = await fetch("https://gcc-iota.vercel.app/api/auth/signup", {
+        const response = await fetch("https://cms-backend-rho.vercel.app/api/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

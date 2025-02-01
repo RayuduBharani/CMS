@@ -10,8 +10,8 @@ export default function LeadMyCourses() {
     const [search, setSearch] = useState<string>('');
     const FetchMyCourses = async () => {
         const url = search
-            ? `https://gcc-iota.vercel.app/student/mycourse/search/${search}`
-            : "https://gcc-iota.vercel.app/student/mycourse/all";
+            ? `https://cms-backend-rho.vercel.app/student/mycourse/search/${search}`
+            : "https://cms-backend-rho.vercel.app/student/mycourse/all";
 
         const response = await fetch(url,{
                 credentials: "include"

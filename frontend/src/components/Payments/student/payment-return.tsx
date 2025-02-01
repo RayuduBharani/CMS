@@ -22,7 +22,7 @@ export default function StudentPaymentReturn() {
                     studentId : user.userId
                 }
                 try {
-                    const respose = await fetch("https://gcc-iota.vercel.app/lead/order/caputre/stu", {
+                    const respose = await fetch("https://cms-backend-rho.vercel.app/lead/order/caputre/stu", {
                         method: "POST",
                         headers: {
                             "Content-type": "application/json"

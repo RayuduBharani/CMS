@@ -15,7 +15,7 @@ export default function EarningPage() {
     const [totalAmount, setTotalAmount] = useState<number>(0);
 
     const fetchInstructorEarnings = async () => {
-        const response = await fetch("https://gcc-iota.vercel.app/instructor/earning/orders", {
+        const response = await fetch("https://cms-backend-rho.vercel.app/instructor/earning/orders", {
             credentials: "include",
         });
         const data = await response.json();

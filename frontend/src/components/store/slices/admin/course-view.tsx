@@ -16,7 +16,7 @@ const initialState:Admininitialstate={
 export const FetchAdminCourseView = createAsyncThunk(
     'admin/mycourses/view-page',
     async(id:string)=>{
-        const response = await fetch(`https://gcc-iota.vercel.app/admin/course/viewcourse/${id}`,{
+        const response = await fetch(`https://cms-backend-rho.vercel.app/admin/course/viewcourse/${id}`,{
             credentials:'include'
         })
         const data = await response.json();

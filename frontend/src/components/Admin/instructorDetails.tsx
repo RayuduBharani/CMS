@@ -19,7 +19,7 @@ export default function InstructorDetails() {
     const param = location.pathname.split("/")[3];
 
     const fetchInstructorEarnings = async () => {
-        const response = await fetch(`https://gcc-iota.vercel.app/admin/instructor/oneuser/${param}`, {
+        const response = await fetch(`https://cms-backend-rho.vercel.app/admin/instructor/oneuser/${param}`, {
             credentials: "include",
         });
         const data = await response.json();

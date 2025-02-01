@@ -7,7 +7,7 @@ export default function AdminInstructors() {
     const [data, setData] = useState([]);
 
     async function fetchinstructors() {
-        const response = await fetch('https://gcc-iota.vercel.app/admin/instructor/all');
+        const response = await fetch('https://cms-backend-rho.vercel.app/admin/instructor/all');
         const data = await response.json();
         console.log(data);
         setData(data);
